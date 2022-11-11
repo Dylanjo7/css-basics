@@ -1,0 +1,98 @@
+body {
+  background-color: rgb(20, 18, 18);
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 40pt;
+  margin: 1%;
+}
+/*  Changes the color and the space between the links */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(20, 18, 18);
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  float: left;
+}
+/* styles the links in the la a and it change dthe size of the clickable boxs */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 100px;
+  text-decoration: none;
+}
+
+/* Change the link color to #darkorange (darkorange) on hover */
+li a:hover {
+  background-color: darkorange;
+}
+
+/* The color of the hr */
+hr {
+  color: darkorange;
+}
+
+/* The class of home page pics changing the border and colors */
+.home-page-pics {
+  border: 5px solid darkorange;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgb(29, 28, 26);
+}
+
+/* The styling of the section where all of the facts are in the wensite, I later might make a class when i add more webpages instead of just styleing sections. */
+section {
+  text-align: center;
+  margin: auto;
+  width: 500px;
+  border: 5px solid grey;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 1%;
+  background: rgb(29, 26, 26);
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  color: #ffffff;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+/* Changes the color of the links or a */
+a {
+  color: darkorange;
+}
+
+/* The id and changing the color and where it i son the page, and the borders. */
+#home-page-video {
+  float: left;
+  border: 5px solid darkorange;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgb(29, 28, 26);
+}
+
+/* The place for my copyright and this changes the color and centers the text */
+footer {
+  background: rgb(29, 26, 26);
+  padding: 10px;
+  order: 4;
+  text-align: center;
+}
+
+footer small {
+  color: white;
+}
