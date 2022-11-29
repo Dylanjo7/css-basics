@@ -30,17 +30,16 @@ li a {
   padding: 10px 100px;
   text-decoration: none;
 }
-
 /* Change the link color to #darkorange (darkorange) on hover */
-li a:hover {
+/* Change the link color to #111 (black) on hover and the box color to (darkorange)*/
+nav a:hover,
+nav a:focus {
   background-color: darkorange;
+  color: black;
 }
-
-/* The color of the hr */
 hr {
   color: darkorange;
 }
-
 /* The class of home page pics changing the border and colors */
 .home-page-pics {
   border: 5px solid darkorange;
@@ -48,24 +47,21 @@ hr {
   border-radius: 10px;
   background: rgb(29, 28, 26);
 }
-
 /* The styling of the section where all of the facts are in the wensite, I later might make a class when i add more webpages instead of just styleing sections. */
 section {
   text-align: center;
   margin: auto;
-  width: 500px;
+  width: 35%;
   border: 5px solid grey;
   padding: 15px;
   border-radius: 20px;
   margin-bottom: 1%;
   background: rgb(29, 26, 26);
 }
-
 h2 {
   color: #ffffff;
   text-align: center;
 }
-
 p {
   color: #ffffff;
   text-align: center;
@@ -73,7 +69,7 @@ p {
 }
 /* Changes the color of the links or a */
 a {
-  color: darkorange;
+  color: #ffdcb4;
 }
 
 /* The id and changing the color and where it i son the page, and the borders. */
@@ -84,7 +80,6 @@ a {
   border-radius: 10px;
   background: rgb(29, 28, 26);
 }
-
 /* The place for my copyright and this changes the color and centers the text */
 footer {
   background: rgb(29, 26, 26);
