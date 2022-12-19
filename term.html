@@ -1,9 +1,10 @@
 <!--
   Name: Dylan Sanchez
-  Course: 
-  Teacher: Scott Hardman
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 11/11/2022
+  Date Last Modified: 2022/12/18 
+  Grade: 4-8
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +15,8 @@
     <title>Terms</title>
     <link rel="stylesheet" href="stylesheet/main.css" />
     <style>
+      /* Changes the font to Segoe UI", Tahoma, Geneva, Verdana, sans-serif and makes the text in the span italic */
+
       span {
         font-style: italic;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +29,6 @@
       <!--hr tags are for adding a horizontal line on your webpage-->
       <hr />
     </header>
-
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -36,173 +38,120 @@
       </ul>
     </nav>
     <hr />
+
     <main>
-      <!-- this div has a group of images-->
-      <div>
-        <!--
-          This is an image of manitoba and all of the treatys inside of manitoba
-        -->
-        <img
-          style="width: 27%; height: 695px; float: left"
-          src="images/treatymap.jpeg"
-          alt="A map of manitoba with all of the
-          diffrent treatys and where they are, treaty 1 is in the south of
-          manitoba."
-          class="home-page-pics" />
+      <div class="grid-container">
+        <div class="item1">
+          <!--
+            This is an image of manitoba and all of the treatys inside of manitoba
+          -->
+
+          <img
+            style="width: 90%"
+            src="images/treatymap.jpeg"
+            alt="A map of manitoba with all of the
+              diffrent treatys and where they are, treaty 1 is in the south of
+              manitoba."
+            class="all-pages-pics" />
+        </div>
+
+        <div class="item2">
+          <section>
+            <h2>Terms</h2>
+            <p>
+              On September 12th, 1871, the <span>treaty</span> was formally
+              confirmed by the Governor General in Council. Each band was to
+              receive a reserve big enough to give each family of five 160 acres
+              (or in like proportion for smaller or larger families). Each man,
+              woman, and child was to get a three-dollar gratuity (or one-time
+              payment), and each family of five was to receive a yearly annuity
+              of $15. The government also committed to forbid the introduction
+              or sale of alcohol on reserves and to maintain a school on each
+              reserve.
+            </p>
+
+            <h2>Terms Signed</h2>
+            <p>
+              "Treaty 1 was signed by government agents Lieutenant-Governor
+              Adams G. Archibald, Commissioner Simpson, Major A.G. Irvine, and
+              eight witnesses. The signatories for the Anishinaabe and the
+              Swampy Cree were: Red Eagle (Mis-koo-ke-new, or Henry Prince);
+              Bird Forever (Ka-ke-ka-penais, or William Pennefather); Flying
+              Down Bird (Na-sha-ke-penais); Centre of Bird’s Tail
+              (Na-na-wa-nanan); Flying Round (Ke-we-tay-ash); Whip-poor-will
+              (Wa-ko-wush); and Yellow Quill (Os-za-we-kwun)."
+            </p>
+            <!--
+              The a href takes you to another webpage and the target="_blank" 
+              takes you to another website/page in a new tab
+            -->
+            <a href="https://treaty1.ca/treaty-one-nation/" target="_blank">
+              Link to Treaty One Website with many facts on Treaty One
+            </a>
+
+            <h2>Quick Facts</h2>
+            <p>
+              "On August 3, 2017, the Treaty No. 1 Legacy Flag Installation was
+              unveiled at Lower Fort Garry to honour the creation of Treaty No.
+              1 and highlight the connection of the Treaty One Nation to the
+              national historic site. This permanent feature includes each First
+              Nation’s flag, as well as the Canadian flag and the Union Jack.
+              The Legacy Flag Installation is located in an area just outside
+              the Fort’s stone walls and is open for free public viewing
+              year-round."
+            </p>
+            <!--
+              The a href takes you to another webpage and the target="_blank" 
+              takes you to another website/page in a new tab
+            -->
+            <a
+              href="https://www.canada.ca/en/parks-canada/news/2021/08/treaty-one-nation-and-government-of-canada-commemorate-150th-anniversary-of-treaty-no-1.html"
+              target="_blank">
+              Link to Government of Canada website of treaty one 150th
+              anniversary.
+            </a>
+          </section>
+        </div>
+
+        <div class="item3">
+          <!--
+            This is an image with 3 men in a canoe in a painting wearing sacred clothing
+          -->
+          <img
+            style="width: 90%"
+            src="images/Treaty One Land_Schools_2022-1.jpg"
+            alt="this image has a certificate of pembinatrails's reconition of treaty one land
+              and how they acknowledge that pembinatrails are on the lands of turtle island where 
+              indigenous peoples have lived since time began. These are the ancestral lands of the 
+              Anishinaabe, Ininew, and Dakota Nations as well as the traditional trade and travel 
+              routes of the Anishininew, Dene, and Inuit. We also acknowledge we are on Treaty One 
+              territory and the homeland of the Red River Métis. Pembina Trails School Division is
+              committed to working together in partnership with Indigenous communities in a
+              spirit of reconciliation. "
+            class="all-pages-pics" />
+
+          <!--
+            This image has a mop of canada and in the map there are numbered treatys
+          -->
+
+          <img
+            style="width: 90%"
+            src="images/A_Plan_of_Lower_Fort_Garry_(1928)_(2196086650).jpg"
+            alt="A map of Lower Fort Garry and the dimentions of the fort in it's early years along the Red River "
+            class="all-pages-pics" />
+        </div>
       </div>
-      <div>
-        <!--
-          This is an image with 3 men in a canoe in a painting wearing sacred clothing
-        -->
-        <img
-          style="width: 27%; height: 695px; float: right"
-          src="images/boat2.jpeg"
-          alt="3 men in a canoe in a painting wearing sacred clothing"
-          class="home-page-pics" />
-      </div>
-      <!--
-        This is a section a section tag is used to group things togetehr on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2><span>Terms</span></h2>
-        <p>
-          On September 12th, 1871, the treaty was formally confirmed by the
-          Governor General in Council. Each band was to receive a reserve big
-          enough to give each family of five 160 acres (or in like proportion
-          for smaller or larger families). Each man, woman, and child was to get
-          a three-dollar gratuity (or one-time payment), and each family of five
-          was to receive a yearly annuity of $15. The government also committed
-          to forbid the introduction or sale of alcohol on reserves and to
-          maintain a school on each reserve.
-        </p>
-      </section>
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-
-      <section>
-        <h2><span>Terms Signed</span></h2>
-        <p>
-          "Treaty 1 was signed by government agents Lieutenant-Governor Adams G.
-          Archibald, Commissioner Simpson, Major A.G. Irvine, and eight
-          witnesses. The signatories for the Anishinaabe and the Swampy Cree
-          were: Red Eagle (Mis-koo-ke-new, or Henry Prince); Bird Forever
-          (Ka-ke-ka-penais, or William Pennefather); Flying Down Bird
-          (Na-sha-ke-penais); Centre of Bird’s Tail (Na-na-wa-nanan); Flying
-          Round (Ke-we-tay-ash); Whip-poor-will (Wa-ko-wush); and Yellow Quill
-          (Os-za-we-kwun)."
-        </p>
-        <!-- 
-          the a href takes you to another webpage and the target="_blank" 
-          takes you to another website/page in a new tab
-        -->
-        <a
-          href="https://www.thecanadianencyclopedia.ca/en/article/treaties-1-and-2"
-          target="_blank">
-          The Canadian Encyclopedia.ca
-        </a>
-      </section>
-
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2><span>Significance of Treaty 1</span></h2>
-        <p>
-          The signing of Treaty 1 signalled the start of a protracted series of
-          treaties that would follow over the ensuing two decades, indicating
-          the Canadian government's growing interest in the West as more than
-          just a trading hub but also as an area suitable for developing
-          agriculture and housing growing populations of settlers as well as a
-          peaceful way to annex land. The pact will allow Governor Adams
-          Archibald to establish industries like mills and farms on the lush
-          area surrounding Lakes Winnipeg and Manitoba as well as in the Red
-          River Valley
-        </p>
-        <!--
-          The a href takes you to another webpage and the target="_blank" 
-          takes you to another website/page in a new tab
-        -->
-        <a href="https://treaty1.ca/treaty-one-nation/" target="_blank">
-          Treaty One.ca
-        </a>
-      </section>
-      <!--
-        This is a video displaying a short story about indigenous peoples
-      -->
-      <iframe
-        width="27%"
-        height="300"
-        src="https://www.youtube.com/embed/k4cBOF9DE10"
-        title="YouTube Treaty one explanation video"
-        frameborder="0"
-        allow="encrypted-media; picture-in-picture"
-        allowfullscreen
-        id="home-page-video">
-      </iframe>
-      <!--
-        A map of Lower Fort Garry and the dimentions of the fort
-      -->
-      <img
-        style="width: 27%; height: 300px; float: right"
-        src="images/A_Plan_of_Lower_Fort_Garry_(1928)_(2196086650).jpg"
-        alt="A map of Lower Fort Garry and the dimentions of the fort (NEED TO EXPAND)"
-        class="home-page-pics" />
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2><span>Goals</span></h2>
-        <p>
-          Both the local indigenous people and Canadian government authorities
-          wanted to ensure the security of their lands and resources, which led
-          to the establishment of the treaty. With the rush of newcomers, the
-          Anishinabe and Swampy Cree Nations tried to preserve their precious
-          grounds while gaining stability in the transition to a new way of
-          life.
-        </p>
-      </section>
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section.
-      -->
-      <section>
-        <h2><span>Canadian Government Failed indigenous peoples</span></h2>
-
-        <p>
-          "Within a year of the agreement, however, the indigenous communities
-          approached the Canadian government declaring that a number of the
-          items promised, which would become known as the “Outside Promises”,
-          within the treaty had not been handed over to them yet, although
-          subjects of the Crown continued to settle the land-based upon the
-          agreed-upon Treaty. On April 30, 1875, a council of the federal
-          government passed an order stating that it must be ensured that all of
-          the Outside Promises were to be fulfilled and considered a part of the
-          main agreements within Treaty 1. However, due to the different
-          intentions and understandings of the Canadian officials and the
-          indigenous communities at the time of its creation, this treaty
-          continues to be considered controversial well into the 21st century."
-        </p>
-        <!--
-          The a href takes you to another webpage and the target="_blank" 
-          takes you to another website/page in a new tab
-        -->
-        <a href="https://en.wikipedia.org/wiki/Treaty_1" target="_blank">
-          Wikipedia Treaty One.ca
-        </a>
-      </section>
     </main>
     <hr />
     <!--
-       A footer holds my copyright and it is at the bottom of the webpage. 
-       The &#169 is a copyright symbol and the <i> makes the words italic
-      -->
+      A footer holds my copyright and it is at the bottom of the webpage. 
+      The &#169 is a copyright symbol and the <i> makes the words italic
+    -->
     <footer>
-      <small>&#169; <i>2022 Dylan</i></small>
+      <p>
+        <small>&#169; <i>2022 Dylan</i></small>
+      </p>
+      <
     </footer>
   </body>
 </html>

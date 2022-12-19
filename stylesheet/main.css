@@ -1,14 +1,40 @@
-body {
-  background-color: rgb(20, 18, 18);
+/* 
+  I have chosen a monochrome color theme. 
+  I have chosen the color based on color psychology and have chosen the color orange because
+  it is a meaningful color for the indigenous peoples. I have chosed dark mode because I have 
+  many images and I want those images to be impactful on the reader. Since there is a lot of text,
+  I have made a section in middle for white and black text for easy reading of the text.
+
+  I also have chosen to have a more basic font because this website is for Grades 4 to 8. I chose
+  to style words in paragraphs like the word Treaty One so that it is more impactful.
+*/
+
+/* The * makes it apply to all of the code or the whole website. It changes the line height to be 140%. */
+* {
+  line-height: 140%;
 }
 
-h1 {
-  color: #ffffff;
-  text-align: center;
-  font-size: 40pt;
-  margin: 1%;
+/* This changes everything in the HTML tag to have the font to be 62.5% size. */
+html {
+  font-size: 62.5%;
 }
-/*  Changes the color and the space between the links */
+
+/* 
+  This changes everything in the body tag to have a background color of RGB (20, 18, 18). 
+  It also changes the font to be "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
+  and changes the size of the font to be 1.5 REM.
+*/
+body {
+  background-color: rgb(20, 18, 18);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.6rem;
+}
+/* 
+  Changes the color and the space between the links
+  This changes everything in the unordered list to have a margin of 0, 
+  a padding of 0, background color of RBG (20, 18, 18).
+  This also changes the display to have flex and changes the justify-content to have a space between.
+*/
 ul {
   list-style-type: none;
   margin: 0;
@@ -19,10 +45,77 @@ ul {
   justify-content: space-between;
 }
 
+/* 
+  This changes everything in the first heading tag to have a color of #ffffff (white).
+  It also changes the text to be centered and have the size of the font to be 40 pixels. 
+  Lastly, it changes the margin to be 1%.
+*/
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 40pt;
+  margin: 1%;
+}
+/* -W3 Schools */
+/* 
+  This grid container, which is a div with a class, is styled by changing the display to a grid and 
+  changes the grid template to organize where the pictures and main should be (pic1 main main main main pic2).
+  It also changes the gap between each grid by 10 pixels. Lastly, it changes the padding to 10 pixels.
+*/
+.grid-container {
+  display: grid;
+  grid-template: "pic1 main main main main pic2";
+  grid-gap: 10px;
+
+  padding: 10px;
+}
+
+/* 
+  This is item1. It is the first grid on the left side of the webpage and the grid area is equal to pic1
+  and the width of the grid is 30vw and it has the overflow as hidden so it hides any overflow.
+*/
+.item1 {
+  grid-area: pic1;
+  width: 30vw;
+  overflow: hidden;
+}
+
+/* 
+  This is item2. It is the second grid on the center/main part of the webpage and the grid area is equal to main
+*/
+.item2 {
+  grid-area: main;
+}
+
+/* 
+  This is item3. It is the third grid on the right side of the webpage and the grid area is equal to pic2.
+  This also changes the width to 30vw
+*/
+.item3 {
+  grid-area: pic2;
+  width: 30vw;
+}
+
+/* 
+  This changes everything in the <element class="grid-container"> <div> to have a padding 
+  of 20 pixels on the top and bottom and having padding of 0 pixels of the left and right
+*/
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 30px;
+}
+
+/* This changes everything in the list item to float left.*/
 li {
   float: left;
 }
-/* styles the links in the la a and it change dthe size of the clickable boxs */
+/* 
+  This styles things in the list item and the anchor to have a color of white and centers the text. 
+  This changes the display to block and changes the top and bottom padding to be 10 pixels and
+  the left and right padding to be 100 pixels. Lastly, it makes it so there is no text decoration 
+  (for example, no underline on links). 
+*/
 li a {
   display: block;
   color: white;
@@ -30,64 +123,105 @@ li a {
   padding: 10px 100px;
   text-decoration: none;
 }
-/* Change the link color to #darkorange (darkorange) on hover */
-/* Change the link color to #111 (black) on hover and the box color to (darkorange)*/
+/* 
+  This styles things within the navigation and the anchor hover/anchor focus. 
+  It changes the background color to be dark orange and changes the font color to be black
+  when hovered or tabbed on.
+*/
 nav a:hover,
 nav a:focus {
   background-color: darkorange;
   color: black;
 }
+/* This chnges the line or the hr tag to become the color orange */
 hr {
   color: darkorange;
 }
-/* The class of home page pics changing the border and colors */
-.home-page-pics {
+/* 
+  Changes the font and makes the text in the span italic 
+  This span also changes the font to be segoe UI, tahoma,
+  ganeva, verdana, sans-seri
+*/
+
+span {
+  font-style: italic;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+  The class of all page pics changing the border and colors.
+  it changes the border to 5px ad makes the border solid and a color of darkorange.
+  This changes the padding to be 15 px.
+  this changes the border radius to be 10px
+  The background gets changed to rgb (29,28,26) also having a margin bottom of 2%
+*/
+.all-pages-pics {
   border: 5px solid darkorange;
   padding: 15px;
   border-radius: 10px;
   background: rgb(29, 28, 26);
+  margin-bottom: 2%;
 }
-/* The styling of the section where all of the facts are in the wensite, I later might make a class when i add more webpages instead of just styleing sections. */
+/*
+  The styling of the section where all of the facts are in the website, 
+  This styles the the text to center and changes margin to auto.
+  This changes the padding to 15 px and the border radius to 10px.
+  It changes the bottom margin to 1% and the background to rgb(255, 255, 255) (white)
+  I later might make a class when i add more webpages instead of just styleing sections. 
+*/
 section {
   text-align: center;
   margin: auto;
-  width: 35%;
-  border: 5px solid grey;
-  padding: 15px;
-  border-radius: 20px;
-  margin-bottom: 1%;
-  background: rgb(29, 26, 26);
-}
-h2 {
-  color: #ffffff;
-  text-align: center;
-}
-p {
-  color: #ffffff;
-  text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-/* Changes the color of the links or a */
-a {
-  color: #ffdcb4;
-}
 
-/* The id and changing the color and where it i son the page, and the borders. */
-#home-page-video {
-  float: left;
-  border: 5px solid darkorange;
   padding: 15px;
   border-radius: 10px;
-  background: rgb(29, 28, 26);
+  margin-bottom: 1%;
+  background: RGB(255, 255, 255);
+  /* 
+    float: auto; 
+    I am keeping this for later
+  */
 }
-/* The place for my copyright and this changes the color and centers the text */
+
+/* This changes the secound heading tag to have the text centered and changes the font size to 30 px */
+h2 {
+  color: #000000;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* 
+  This changes the paragraphs/p tags to have a font color of #000000 (black). This also centers
+  the text and changes the size of the font to be 20 pixels.
+*/
+p {
+  color: #000000;
+  text-align: center;
+
+  font-size: 20px;
+}
+
+/* 
+  This changes everything in the anchor to have a font color of #1a1c1d. It also changes the size 
+  of the font to be 18 pixels. 
+*/
+a {
+  color: #1a1c1d;
+  font-size: 18px;
+}
+
+/* 
+  This changes the footer to have a background color of 29,26,26 and have a padding of 
+  10px and centers the text with text align center also the footer is for my copyright and 
+  this changes the color and centers the text 
+*/
 footer {
   background: rgb(29, 26, 26);
   padding: 10px;
   order: 4;
   text-align: center;
 }
-
+/* Changes whatever is in the footer and small tag to change the font to white */
 footer small {
   color: white;
 }

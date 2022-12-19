@@ -3,7 +3,7 @@
   Course: Software Development 20S
   Teacher: Mr. Hardman
   School: Pembina Trails Early College
-  Date Last Modified: 11/11/2022
+  Date Last Modified: 2022/12/18
   Grade: 4-8
 -->
 <!DOCTYPE html>
@@ -15,10 +15,18 @@
     <title>Treaty 1</title>
     <link rel="stylesheet" href="stylesheet/main.css" />
     <style>
-      /* Changes the font and makes the text in the span italic */
-      span {
-        font-style: italic;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      /*
+        This changes the div with the id of home-page-video by changing the border of the video
+        to be 5 pixels and to be a solid dark orange border. It also changes the radius of the border
+        to be 10 pixels. This also changes the padding to be 15 pixels and changes the background to
+        be RGB (29, 26, 26).  
+      */
+      #home-page-video {
+        /* float: left; */
+        border: 5px solid darkorange;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgb(29, 26, 26);
       }
     </style>
   </head>
@@ -31,7 +39,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="">Place Holder</a></li>
+        <li><a href="term.html">Terms</a></li>
         <li><a href="">Place Holder</a></li>
         <li><a href="">Place Holder</a></li>
       </ul>
@@ -39,162 +47,162 @@
     <hr />
 
     <main>
-      <!-- this div has a group of images-->
-      <div>
-        <!--
-          This is an image of manitoba and all of the treatys inside of manitoba
-        -->
-        <img
-          style="width: 450px; height: 695px; float: left"
-          src="images/treatymap.jpeg"
-          alt="A map of manitoba with all of the
-          diffrent treatys and where they are, treaty 1 is in the south of
-          manitoba."
-          class="home-page-pics" />
-        <!--
-          This is an image with 3 men in a canoe in a painting wearing sacred clothing
-        -->
-        <img
-          style="width: 450px; height: 695px; float: right"
-          src="images/boat2.jpeg"
-          alt="3 men in a canoe in a painting wearing sacred clothing"
-          class="home-page-pics" />
-      </div>
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2>
-          <span> What is a Treaty </span>
-        </h2>
-        <p>
-          "Treaty, a binding formal agreement, contract, or other written
-          instrument that establishes obligations between two or more subjects
-          of international law (primarily states and international
-          organizations)"
-        </p>
+      <div class="grid-container">
         <!-- 
-          the a href takes you to another webpage and the target="_blank" 
-          takes you to another website/page in a new tab
+          This div has a group of images. This div is a part of a grid layout and this is the first item/collumn.
+          This div is a class called item1 and it holds the images on the left.
         -->
-        <a href="https://www.britannica.com/topic/treaty" target="_blank">
-          Britannica Treaty.ca
-        </a>
-      </section>
-      <!--
-        This is a section a section tag is used to group things togetehr on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2>
-          <span>What is Treaty 1</span>
-        </h2>
-        <p>
-          "Treaty One Nation is composed of the seven First Nations who are
-          signatories to the first of the numbered Treaties, originally signed
-          on August 3, 1871 at Lower Fort Garry after several days of
-          discussions and ceremonies."
-        </p>
-        <!--
-          The a href takes you to another webpage and the target="_blank" 
-          takes you to another website/page in a new tab
-        -->
-        <a href="https://treaty1.ca/treaty-one-nation/" target="_blank">
-          Treaty One.ca
-        </a>
-      </section>
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2>
-          <span>Significance of Treaty 1</span>
-        </h2>
-        <p>
-          The signing of Treaty 1 signalled the start of a protracted series of
-          treaties that would follow over the ensuing two decades, indicating
-          the Canadian government's growing interest in the West as more than
-          just a trading hub but also as an area suitable for developing
-          agriculture and housing growing populations of settlers as well as a
-          peaceful way to annex land. The pact will allow Governor Adams
-          Archibald to establish industries like mills and farms on the lush
-          area surrounding Lakes Winnipeg and Manitoba as well as in the Red
-          River Valley
-        </p>
-      </section>
-      <!--
-        This is a video displaying a short story about indigenous peoples
-      -->
-      <iframe
-        width="450"
-        height="300"
-        src="https://www.youtube.com/embed/k4cBOF9DE10"
-        title="YouTube Treaty one explanation video"
-        frameborder="0"
-        allow="encrypted-media; picture-in-picture"
-        allowfullscreen
-        id="home-page-video">
-      </iframe>
-      <!--
-        This image has a mop of canada and in the map there are numbered treatys
-      -->
-      <img
-        style="width: 450px; height: 300px; float: right"
-        src="images/canadatreatymap.jpeg"
-        alt="A map of canada with all of the
-        diffrent treatys and where they are, treaty 1 is in the south of
-        manitoba/canada map."
-        class="home-page-pics" />
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section
-      -->
-      <section>
-        <h2>
-          <span>Goals</span>
-        </h2>
-        <p>
-          Both the local indigenous people and Canadian government authorities
-          wanted to ensure the security of their lands and resources, which led
-          to the establishment of the treaty. With the rush of newcomers, the
-          Anishinabe and Swampy Cree Nations tried to preserve their precious
-          grounds while gaining stability in the transition to a new way of
-          life.
-        </p>
-      </section>
-      <!--
-        This is a section a section tag is used to group things together on your webpage.
-        I also used it so i can syle borders around each section.
-      -->
-      <section>
-        <h2>
-          <span>Canadian Government Failed indigenous peoples</span>
-        </h2>
+        <div class="item1">
+          <!--
+            This is an image of manitoba and all of the treatys inside of manitoba.
+          -->
 
-        <p>
-          "Within a year of the agreement, however, the indigenous communities
-          approached the Canadian government declaring that a number of the
-          items promised, which would become known as the “Outside Promises”,
-          within the treaty had not been handed over to them yet, although
-          subjects of the Crown continued to settle the land-based upon the
-          agreed-upon Treaty. On April 30, 1875, a council of the federal
-          government passed an order stating that it must be ensured that all of
-          the Outside Promises were to be fulfilled and considered a part of the
-          main agreements within Treaty 1. However, due to the different
-          intentions and understandings of the Canadian officials and the
-          indigenous communities at the time of its creation, this treaty
-          continues to be considered controversial well into the 21st century."
-        </p>
-        <!--
-          The a href takes you to another webpage and the target="_blank" 
-          takes you to another website/page in a new tab
+          <img
+            style="width: 90%"
+            src="images/treatymap.jpeg"
+            alt="A map of manitoba with all of the
+              diffrent treatys and where they are, treaty 1 is in the south of
+              manitoba."
+            class="all-pages-pics" />
+
+          <iframe
+            width="90%"
+            height="300vw"
+            src="https://www.youtube.com/embed/k4cBOF9DE10"
+            title="YouTube Treaty one explanation video"
+            frameborder="0"
+            allow="encrypted-media; picture-in-picture"
+            allowfullscreen
+            id="home-page-video">
+          </iframe>
+        </div>
+        <!-- 
+          This div has a group of text and facts and sections. This div is a part of a grid layout and this is the secound item/collumn.
+          This div is a class called item2 and it holds the sections in the middle.
         -->
-        <a href="https://en.wikipedia.org/wiki/Treaty_1" target="_blank">
-          Wikipedia Treaty One.ca
-        </a>
-      </section>
+        <div class="item2">
+          <!--
+            This is a section a section tag is used to group things together on your webpage.
+            I also used it so i can syle borders around each section
+          -->
+
+          <section>
+            <h2>What is a Treaty</h2>
+            <p>
+              "Treaty, a binding formal agreement, contract, or other written
+              instrument that establishes obligations between two or more
+              subjects of international law (primarily states and international
+              organizations)"
+            </p>
+            <!-- 
+              the a href takes you to another webpage and the target="_blank" 
+              takes you to another website/page in a new tab
+            -->
+            <a href="https://www.britannica.com/topic/treaty" target="_blank">
+              Link to Britannica Website about Treaty One
+            </a>
+            <h2>What is Treaty 1</h2>
+            <p>
+              "<span>Treaty One</span> Nation is composed of the seven First
+              Nations who are signatories to the first of the numbered Treaties,
+              originally signed on August 3, 1871 at Lower Fort Garry after
+              several days of discussions and ceremonies."
+            </p>
+            <!--
+              The a href takes you to another webpage and the target="_blank" 
+              takes you to another website/page in a new tab
+            -->
+            <a href="https://treaty1.ca/treaty-one-nation/" target="_blank">
+              Link to Treaty One Website with many facts on Treaty One
+            </a>
+
+            <h2>Significance of Treaty 1</h2>
+            <p>
+              The signing of Treaty 1 signalled the start of a protracted series
+              of treaties that would follow over the ensuing two decades,
+              indicating the Canadian government's growing interest in the West
+              as more than just a trading hub but also as an area suitable for
+              developing agriculture and housing growing populations of settlers
+              as well as a peaceful way to annex land. The pact will allow
+              Governor Adams Archibald to establish industries like mills and
+              farms on the lush area surrounding Lakes Winnipeg and Manitoba as
+              well as in the Red River Valley
+            </p>
+
+            <h2>Goals</h2>
+            <p>
+              Both the local indigenous people and Canadian government
+              authorities wanted to ensure the security of their lands and
+              resources, which led to the establishment of the treaty. With the
+              rush of newcomers, the Anishinabe and Swampy Cree Nations tried to
+              preserve their precious grounds while gaining stability in the
+              transition to a new way of life.
+            </p>
+
+            <!--
+              This is a section a section tag is used to group things together on your webpage.
+              I also used it so i can syle borders around each section.
+            -->
+
+            <h2>Canadian Government Failed indigenous peoples</h2>
+
+            <p>
+              "Within a year of the agreement, however, the indigenous
+              communities approached the Canadian government declaring that a
+              number of the items promised, which would become known as the
+              “Outside Promises”, within the treaty had not been handed over to
+              them yet, although subjects of the Crown continued to settle the
+              land-based upon the agreed-upon Treaty. On April 30, 1875, a
+              council of the federal government passed an order stating that it
+              must be ensured that all of the Outside Promises were to be
+              fulfilled and considered a part of the main agreements within
+              Treaty 1. However, due to the different intentions and
+              understandings of the Canadian officials and the indigenous
+              communities at the time of its creation, this treaty continues to
+              be considered controversial well into the 21st century."
+            </p>
+            <!--
+              The a href takes you to another webpage and the target="_blank" 
+              takes you to another website/page in a new tab
+            -->
+            <a href="https://en.wikipedia.org/wiki/Treaty_1" target="_blank">
+              Link to a Wikipedia site about Treaty One
+            </a>
+          </section>
+        </div>
+        <!-- 
+          This div has a group of images. This div is a part of a grid layout and this is the third item/collumn.
+          This div is a class called item3 and it holds the images on the right.
+        -->
+
+        <div class="item3">
+          <!--
+            This image has one indigenous person and one british person shaing hands in a circle.
+            There is a tp behind them with buildings and a river. On the outside of the circle there
+            are four fethers on each side and there are a mix of black, red, yellow and white with
+            the words treaty one at the bottom.
+          -->
+          <img
+            style="width: 90%"
+            src="images/treaty-one-logo.gif"
+            alt="This image has one indigenous person and one british person shaing hands in a circle.
+              There is a tp behind them with buildings and a river. On the outside of the circle there
+              are four fethers on each side and there are a mix of black, red, yellow and white with
+              the words treaty one at the bottom. "
+            class="all-pages-pics" />
+
+          <!--
+            This image has a map of canada and in the map there are numbered treatys
+          -->
+
+          <img
+            style="width: 90%"
+            src="images/canadatreatymap.jpeg"
+            alt="A map of Canada and all of the treatys in canada and where each one of them are, the image 
+              is in black and white. "
+            class="all-pages-pics" />
+        </div>
+      </div>
     </main>
     <hr />
     <!--
@@ -202,7 +210,9 @@
       The &#169 is a copyright symbol and the <i> makes the words italic
     -->
     <footer>
-      <small>&#169; <i>2022 Dylan</i></small>
+      <p>
+        <small>&#169; <i>2022 Dylan</i></small>
+      </p>
     </footer>
   </body>
 </html>
