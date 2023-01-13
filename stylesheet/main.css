@@ -28,6 +28,82 @@ body {
   background-color: rgb(20, 18, 18);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.6rem;
+  display: inline-block;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+
+  transform: translateY(-100px);
+
+  /*
+    This defines our animation.
+          
+    We define the animation-name as fade-in.
+    We define the animation-duration (how long the animation lasts) as 1 second.
+    We define the animation-timing-funtion (how the styling changes as it moves through the
+    animation) as ease-in, which means it will slowly start the animation and speed up to the end.
+    We define the animation-delay as 2 seconds.
+    We define the animation-fill-mode (whether the styling is kept at the end of the animation
+    or not) to forwards, which means to keep the styling that is at the end of the animation.
+    Other animation properties that we do not define in this example are:
+          
+    animation-iteration-count - how many times you want your animation to run
+          
+    animation-direction - do you want your animation to go forward (normal)? Backward (reverse)? 
+    Forward and then backward (alternate)? Backward and then forward 
+    (alternate-reverse)?
+    -Mr. Hardman
+  */
+  -o-animation: fade-in 0.5s ease-in 1s forwards;
+  -moz-animation: fade-in 0.5s ease-in 1s forwards;
+  -webkit-animation: fade-in 0.5s ease-in 1s forwards;
+  animation: fade-in 0.5s ease-in 1s forwards;
+}
+@-o-keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+  this chnages the amination. I use @keyframes to show that i am creating an animation and the i use the same name that i did above
+*/
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 100;
+    transform: translateY(0);
+  }
 }
 /* 
   Changes the color and the space between the links
@@ -58,9 +134,10 @@ h1 {
 }
 /* -W3 Schools */
 /* 
-  This grid container, which is a div with a class, is styled by changing the display to a grid and 
+  This grid container, which is a section with a class, is styled by changing the display to a grid and 
   changes the grid template to organize where the pictures and main should be (pic1 main main main main pic2).
   It also changes the gap between each grid by 10 pixels. Lastly, it changes the padding to 10 pixels.
+  This is now a section.
 */
 .grid-container {
   display: grid;
@@ -71,36 +148,40 @@ h1 {
 }
 
 /* 
-  This is item1. It is the first grid on the left side of the webpage and the grid area is equal to pic1
+  This is multimedia-left. It is the first grid on the left side of the webpage and the grid area is equal to pic1
   and the width of the grid is 30vw and it has the overflow as hidden so it hides any overflow.
 */
-.item1 {
+.multimedia-left {
   grid-area: pic1;
   width: 30vw;
   overflow: hidden;
 }
 
 /* 
-  This is item2. It is the second grid on the center/main part of the webpage and the grid area is equal to main
+  This is text-content. It is the second grid on the center/main part of the webpage and the grid area is equal to main.
+  This also changes the backgroundo fthe text content to be white so it is easier to read and it has a border-radius to 
+  round the edges of the border to 10px.
 */
-.item2 {
+.text-content {
   grid-area: main;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* 
-  This is item3. It is the third grid on the right side of the webpage and the grid area is equal to pic2.
+  This is multimedia-right. It is the third grid on the right side of the webpage and the grid area is equal to pic2.
   This also changes the width to 30vw
 */
-.item3 {
+.multimedia-right {
   grid-area: pic2;
   width: 30vw;
 }
 
 /* 
-  This changes everything in the <element class="grid-container"> <div> to have a padding 
+  This changes everything in the <section class="grid-container"> <section> to have a padding 
   of 20 pixels on the top and bottom and having padding of 0 pixels of the left and right
 */
-.grid-container > div {
+.grid-container > section {
   text-align: center;
   padding: 20px 0px;
   font-size: 30px;
@@ -127,6 +208,14 @@ li a {
   This styles things within the navigation and the anchor hover/anchor focus. 
   It changes the background color to be dark orange and changes the font color to be black
   when hovered or tabbed on.
+*/
+.nav-link {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 
+  This changes the nave buttons when they are hovered or tabed through and it changes the background color of the botton to be dark orange.
+  and it changes the color of the font to black.
 */
 nav a:hover,
 nav a:focus {
@@ -166,7 +255,8 @@ span {
   The styling of the section where all of the facts are in the website, 
   This styles the the text to center and changes margin to auto.
   This changes the padding to 15 px and the border radius to 10px.
-  It changes the bottom margin to 1% and the background to rgb(255, 255, 255) (white)
+  It changes the bottom margin to 1% "and the background to rgb(255, 255, 255) (white)"  <---- not anymore but keeping 
+  if i want the whole site as light mode.
   I later might make a class when i add more webpages instead of just styleing sections. 
 */
 section {
@@ -176,7 +266,7 @@ section {
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 1%;
-  background: RGB(255, 255, 255);
+  /* background: RGB(255, 255, 255); */
   /* 
     float: auto; 
     I am keeping this for later
@@ -211,10 +301,97 @@ a {
 }
 
 /* 
+  This changes everything inside of the back to top class to  
+*/
+.back-to-top {
+  /*
+    We changed the display to flexbox so that we can center the
+    text indide the ancor horizontally and vertically
+    -Mr. Hardman
+  */
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  /*
+    This allows us to make the position to become sticky so it stays on the screen in the bottom right because the animation broke fixed.
+    It is in the bottom right coner of the webpage and makes it follow the user when they scroll.
+    i had to use left becasue for some reason sticky would does not like right.
+    
+  */
+  position: sticky;
+  bottom: 30px;
+  left: 95%;
+  /* This changes the size of the back to top button to be 80-80px before hovered on. */
+  width: 80px;
+  height: 80px;
+  /* 
+    This allows us to center our content horizontally in the 
+    Back to Top anchor.
+    - Mr. Hardman
+  */
+  -ms-flex-pack: center;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /*
+    This allows us to center our content vertically in the
+    Back to Top anchor.
+    -Mr. Hardman 
+  */
+  -ms-flex-align: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  border: #121212 solid 2px;
+
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+
+  /*
+    This allows us to style the background of the Back to Top
+    button to be a radial gradient because it is a round button.
+    The first color is at the center of the gradient and the second
+    color is at the edge of the round area.
+    - Mr. Hardman 
+  */
+  background: -moz-radial-gradient(#f5af19, #f12711);
+  background: -o-radial-gradient(#f5af19, #f12711);
+  background: -webkit-radial-gradient(#f5af19, #f12711);
+  background: radial-gradient(#f5af19, #f12711);
+
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 1s ease-in-out, color 1s ease-in-out;
+}
+.back-to-top:hover,
+.back-to-top:focus {
+  width: 90px;
+  height: 90px;
+}
+
+#cleared {
+  /*
+    This allows us to style the background of the Back to Top
+    button to be a radial gradient because it is a round button.
+    The first color is at the center of the gradient and the second
+    color is at the edge of the round area. 
+    -Mr. Hardman
+  */
+  clear: left;
+}
+/* 
   This changes the footer to have a background color of 29,26,26 and have a padding of 
   10px and centers the text with text align center also the footer is for my copyright and 
   this changes the color and centers the text 
 */
+
 footer {
   background: rgb(29, 26, 26);
   padding: 10px;
