@@ -7,6 +7,9 @@
 
   I also have chosen to have a more basic font because this website is for Grades 4 to 8. I chose
   to style words in paragraphs like the word Treaty One so that it is more impactful.
+
+  I have used my primary color to draw the users attention to the pictures by outlining them with orange and outlining my nav with orange and making
+  the back to top button a gratiant orange.
 */
 
 /* The * makes it apply to all of the code or the whole website. It changes the line height to be 140%. */
@@ -17,25 +20,33 @@
 /* This changes everything in the HTML tag to have the font to be 62.5% size. */
 html {
   font-size: 62.5%;
+  block-size: 100%;
+  inline-size: 100%;
+  scroll-behavior: smooth;
 }
 
 /* 
   This changes everything in the body tag to have a background color of RGB (20, 18, 18). 
   It also changes the font to be "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
   and changes the size of the font to be 1.5 REM.
+  Place content center centers the content
+  Changes the opacity to zero and changes the min block and inline to 100%
+  lastly changes the box sizing to border-box.
 */
 body {
   background-color: rgb(20, 18, 18);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.6rem;
   display: inline-block;
-
-  background-size: cover;
-  background-repeat: no-repeat;
   opacity: 0;
 
-  transform: translateY(-100px);
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
 
+  place-content: center;
+  /* -https://blog.hubspot.com/website/css-animation-examples */
   /*
     This defines our animation.
           
@@ -60,6 +71,9 @@ body {
   -webkit-animation: fade-in 0.5s ease-in 1s forwards;
   animation: fade-in 0.5s ease-in 1s forwards;
 }
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in opera
+*/
 @-o-keyframes fade-in {
   from {
     opacity: 0;
@@ -70,7 +84,9 @@ body {
     transform: translateY(0);
   }
 }
-
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in Firefox
+*/
 @-moz-keyframes fade-in {
   from {
     opacity: 0;
@@ -81,8 +97,23 @@ body {
     transform: translateY(0);
   }
 }
-
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in Chrome
+*/
 @-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in Chrome
+*/
+@-ms-keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(-100px);
@@ -105,6 +136,12 @@ body {
     transform: translateY(0);
   }
 }
+/* https://blog.hubspot.com/website/css-animation-examples */
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
 /* 
   Changes the color and the space between the links
   This changes everything in the unordered list to have a margin of 0, 
@@ -116,7 +153,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(20, 18, 18);
+
   display: flex;
   justify-content: space-between;
 }
@@ -190,6 +227,8 @@ h1 {
 /* This changes everything in the list item to float left.*/
 li {
   float: left;
+  position: relative;
+  font-size: 5rem;
 }
 /* 
   This styles things in the list item and the anchor to have a color of white and centers the text. 
@@ -205,6 +244,33 @@ li a {
   text-decoration: none;
 }
 /* 
+  This changes the scaleX on transform to zero before the transform happens 
+  -https://blog.hubspot.com/website/css-animation-examples
+*/
+li::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+li:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: darkorange;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+/* 
   This styles things within the navigation and the anchor hover/anchor focus. 
   It changes the background color to be dark orange and changes the font color to be black
   when hovered or tabbed on.
@@ -217,15 +283,16 @@ li a {
   This changes the nave buttons when they are hovered or tabed through and it changes the background color of the botton to be dark orange.
   and it changes the color of the font to black.
 */
-nav a:hover,
+/* nav a:hover,
 nav a:focus {
   background-color: darkorange;
   color: black;
-}
+} */
 /* This chnges the line or the hr tag to become the color orange */
 hr {
   color: darkorange;
 }
+
 /* 
   Changes the font and makes the text in the span italic 
   This span also changes the font to be segoe UI, tahoma,
@@ -233,8 +300,10 @@ hr {
 */
 
 span {
+  font-style: bold;
   font-style: italic;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /*
