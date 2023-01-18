@@ -1,7 +1,7 @@
 /* 
   I have chosen a monochrome color theme. 
   I have chosen the color based on color psychology and have chosen the color orange because
-  it is a meaningful color for the indigenous peoples. I have chosed dark mode because I have 
+  it is a meaningful color for the indigenous peoples. I have chosen dark mode because I have 
   many images and I want those images to be impactful on the reader. Since there is a lot of text,
   I have made a section in middle for white and black text for easy reading of the text.
 
@@ -9,7 +9,7 @@
   to style words in paragraphs like the word Treaty One so that it is more impactful.
 
   I have used my primary color to draw the users attention to the pictures by outlining them with orange and outlining my nav with orange and making
-  the back to top button a gratiant orange.
+  the back to top button a gradient orange.
 */
 
 /* The * makes it apply to all of the code or the whole website. It changes the line height to be 140%. */
@@ -19,7 +19,9 @@
 
 /* This changes everything in the HTML tag to have the font to be 62.5% size. */
 html {
+  /*Typography stuff*/
   font-size: 62.5%;
+  /*Miscellaneous*/
   block-size: 100%;
   inline-size: 100%;
   scroll-behavior: smooth;
@@ -34,113 +36,138 @@ html {
   lastly changes the box sizing to border-box.
 */
 body {
+  /*Display stuff*/
+  display: inline-block;
+  /*Box model stuff*/
+  margin: 0;
   background-color: rgb(20, 18, 18);
+  /*Typography stuff*/
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.6rem;
-  display: inline-block;
+  /*Manipulations stuff*/
+  animation: fade-in 0.5s ease-in 1s forwards;
   opacity: 0;
-
+  /*Miscellaneous*/
   min-block-size: 100%;
   min-inline-size: 100%;
-  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-
   place-content: center;
   /* -https://blog.hubspot.com/website/css-animation-examples */
   /*
-    This defines our animation.
-          
-    We define the animation-name as fade-in.
-    We define the animation-duration (how long the animation lasts) as 1 second.
-    We define the animation-timing-funtion (how the styling changes as it moves through the
-    animation) as ease-in, which means it will slowly start the animation and speed up to the end.
-    We define the animation-delay as 2 seconds.
-    We define the animation-fill-mode (whether the styling is kept at the end of the animation
-    or not) to forwards, which means to keep the styling that is at the end of the animation.
-    Other animation properties that we do not define in this example are:
-          
-    animation-iteration-count - how many times you want your animation to run
-          
-    animation-direction - do you want your animation to go forward (normal)? Backward (reverse)? 
-    Forward and then backward (alternate)? Backward and then forward 
-    (alternate-reverse)?
-    -Mr. Hardman
+    This defines our animation.              
+    We define the animation-name as fade-in.    
+    We define the animation-duration (how long the animation lasts) as 1 second.   
+    We define the animation-timing-function (how the styling changes as it moves through the    
+    animation) as ease-in, which means it will slowly start the animation and speed up to the end.   
+    We define the animation-delay as 2 seconds.    
+    We define the animation-fill-mode (whether the styling is kept at the end of the animation    
+    or not) to forwards, which means to keep the styling that is at the end of the animation.    
+    Other animation properties that we do not define in this example are:              
+    animation-iteration-count - how many times you want your animation to run              
+    animation-direction - do you want your animation to go forward (normal)? Backward (reverse)?     
+    Forward and then backward (alternate)? Backward and then forward     
+    (alternate-reverse)?    
+    -Mr. Hardman  
   */
   -o-animation: fade-in 0.5s ease-in 1s forwards;
   -moz-animation: fade-in 0.5s ease-in 1s forwards;
   -webkit-animation: fade-in 0.5s ease-in 1s forwards;
-  animation: fade-in 0.5s ease-in 1s forwards;
 }
+
 /* 
   Changes the opacity from 0 to 1 in a keyframes in opera
 */
 @-o-keyframes fade-in {
   from {
     opacity: 0;
+    -o-transform: translateY(-100px);
     transform: translateY(-100px);
   }
+
   to {
     opacity: 1;
+    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
+
 /* 
   Changes the opacity from 0 to 1 in a keyframes in Firefox
 */
 @-moz-keyframes fade-in {
   from {
     opacity: 0;
+    -moz-transform: translateY(-100px);
     transform: translateY(-100px);
   }
+
   to {
     opacity: 1;
+    -moz-transform: translateY(0);
     transform: translateY(0);
   }
 }
+
 /* 
   Changes the opacity from 0 to 1 in a keyframes in Chrome
 */
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-100px);
     transform: translateY(-100px);
   }
+
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
+
 /* 
   Changes the opacity from 0 to 1 in a keyframes in Chrome
 */
-@-ms-keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 /* 
-  this chnages the amination. I use @keyframes to show that i am creating an animation and the i use the same name that i did above
+  this changes the animation. I use @keyframes to show that i am creating an animation and the i use the same name that i did above
 */
 @keyframes fade-in {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
     transform: translateY(-100px);
   }
+
   to {
     opacity: 100;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
+
 /* https://blog.hubspot.com/website/css-animation-examples */
 @media (orientation: landscape) {
   body {
     grid-auto-flow: column;
   }
+}
+/* 
+  This changes everything in the first heading tag to have a color of #ffffff (white).
+  It also changes the text to be centered and have the size of the font to be 40 pixels. 
+  Lastly, it changes the margin to be 1%.
+*/
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 40pt;
+  margin: 1%;
 }
 /* 
   Changes the color and the space between the links
@@ -154,21 +181,130 @@ ul {
   padding: 0;
   overflow: hidden;
 
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 /* 
-  This changes everything in the first heading tag to have a color of #ffffff (white).
-  It also changes the text to be centered and have the size of the font to be 40 pixels. 
-  Lastly, it changes the margin to be 1%.
+  This changes everything in the list item to float left.
+  This also changes the position to relative and the font size the 5 rem.
 */
-h1 {
-  color: #ffffff;
-  text-align: center;
-  font-size: 40pt;
-  margin: 1%;
+li {
+  float: left;
+  position: relative;
+  font-size: 5rem;
 }
+
+/* 
+  This styles things in the list item and the anchor to have a color of white and centers the text. 
+  This changes the display to block and changes the top and bottom padding to be 10 pixels and
+  the left and right padding to be 100 pixels. Lastly, it makes it so there is no text decoration 
+  (for example, no underline on links). 
+*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 100px;
+  text-decoration: none;
+}
+
+/* 
+  This changes the scaleX on transform to zero before the transform happens .
+  This also changes the content to have no text and changes the 
+  -https://blog.hubspot.com/website/css-animation-examples
+*/
+nav a::before {
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+  -moz-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  -o-transform-origin: bottom right;
+  transform-origin: bottom right;
+
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: darkorange;
+  z-index: -1;
+
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease,
+    -moz-transform 0.3s ease, -o-transform 0.3s ease;
+}
+
+/* 
+  This changes the scaleX to become 1 when hovered on and change from right to bottom left.
+  there are also all of the prefix's for those.
+*/
+nav a:hover::before,
+nav a:focus::before {
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  -o-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+/* 
+  This styles things within the navigation and the anchor hover/anchor focus. 
+  It changes the background color to be dark orange and changes the font color to be black
+  when hovered or tabbed on.
+*/
+.nav-link {
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 
+  This changes the nav buttons when they are hovered or tabbed through and it changes the background color of the botton to be dark orange.
+  and it changes the color of the font to black.
+*/
+
+/* keep for later */
+/* nav a:focus {
+  background-color: darkorange;
+  color: black;
+} */
+nav a:hover {
+  color: black;
+}
+
+/* This changes the line or the hr tag to become the color orange */
+hr {
+  border-color: darkorange;
+  color: darkorange;
+}
+
 /* -W3 Schools */
 /* 
   This grid container, which is a section with a class, is styled by changing the display to a grid and 
@@ -177,7 +313,9 @@ h1 {
   This is now a section.
 */
 .grid-container {
+  display: -ms-grid;
   display: grid;
+
   grid-template: "pic1 main main main main pic2";
   grid-gap: 10px;
 
@@ -196,12 +334,15 @@ h1 {
 
 /* 
   This is text-content. It is the second grid on the center/main part of the webpage and the grid area is equal to main.
-  This also changes the backgroundo fthe text content to be white so it is easier to read and it has a border-radius to 
+  This also changes the background of the text content to be white so it is easier to read and it has a border-radius to 
   round the edges of the border to 10px.
 */
 .text-content {
+  -ms-grid-column-span: 7;
   grid-area: main;
   background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
 }
 
@@ -222,75 +363,6 @@ h1 {
   text-align: center;
   padding: 20px 0px;
   font-size: 30px;
-}
-
-/* This changes everything in the list item to float left.*/
-li {
-  float: left;
-  position: relative;
-  font-size: 5rem;
-}
-/* 
-  This styles things in the list item and the anchor to have a color of white and centers the text. 
-  This changes the display to block and changes the top and bottom padding to be 10 pixels and
-  the left and right padding to be 100 pixels. Lastly, it makes it so there is no text decoration 
-  (for example, no underline on links). 
-*/
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 100px;
-  text-decoration: none;
-}
-/* 
-  This changes the scaleX on transform to zero before the transform happens 
-  -https://blog.hubspot.com/website/css-animation-examples
-*/
-li::before {
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-
-li:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  inset: 0 0 0 0;
-  background: darkorange;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-/* 
-  This styles things within the navigation and the anchor hover/anchor focus. 
-  It changes the background color to be dark orange and changes the font color to be black
-  when hovered or tabbed on.
-*/
-.nav-link {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* 
-  This changes the nave buttons when they are hovered or tabed through and it changes the background color of the botton to be dark orange.
-  and it changes the color of the font to black.
-*/
-/* nav a:hover,
-nav a:focus {
-  background-color: darkorange;
-  color: black;
-} */
-/* This chnges the line or the hr tag to become the color orange */
-hr {
-  color: darkorange;
 }
 
 /* 
@@ -316,23 +388,28 @@ span {
 .all-pages-pics {
   border: 5px solid darkorange;
   padding: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   background: rgb(29, 28, 26);
   margin-bottom: 2%;
 }
+
 /*
   The styling of the section where all of the facts are in the website, 
   This styles the the text to center and changes margin to auto.
   This changes the padding to 15 px and the border radius to 10px.
   It changes the bottom margin to 1% "and the background to rgb(255, 255, 255) (white)"  <---- not anymore but keeping 
   if i want the whole site as light mode.
-  I later might make a class when i add more webpages instead of just styleing sections. 
+  I later might make a class when i add more webpages instead of just styling sections. 
 */
 section {
   text-align: center;
   margin: auto;
 
   padding: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   margin-bottom: 1%;
   /* background: RGB(255, 255, 255); */
@@ -342,7 +419,7 @@ section {
   */
 }
 
-/* This changes the secound heading tag to have the text centered and changes the font size to 30 px */
+/* This changes the second heading tag to have the text centered and changes the font size to 30 px */
 h2 {
   color: #000000;
   text-align: center;
@@ -356,7 +433,8 @@ h2 {
 p {
   color: #000000;
   text-align: center;
-
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 20px;
 }
 
@@ -375,7 +453,7 @@ a {
 .back-to-top {
   /*
     We changed the display to flexbox so that we can center the
-    text indide the ancor horizontally and vertically
+    text inside the anchor horizontally and vertically
     -Mr. Hardman
   */
   display: -ms-flexbox;
@@ -385,10 +463,11 @@ a {
   display: flex;
   /*
     This allows us to make the position to become sticky so it stays on the screen in the bottom right because the animation broke fixed.
-    It is in the bottom right coner of the webpage and makes it follow the user when they scroll.
-    i had to use left becasue for some reason sticky would does not like right.
+    It is in the bottom right corner of the webpage and makes it follow the user when they scroll.
+    i had to use left because for some reason sticky would does not like right.
     
   */
+  position: -webkit-sticky;
   position: sticky;
   bottom: 30px;
   left: 95%;
@@ -437,8 +516,12 @@ a {
   text-align: center;
   font-weight: bold;
   text-decoration: none;
+  -webkit-transition: 1s ease-in-out, color 1s ease-in-out;
+  -o-transition: 1s ease-in-out, color 1s ease-in-out;
+  -moz-transition: 1s ease-in-out, color 1s ease-in-out;
   transition: 1s ease-in-out, color 1s ease-in-out;
 }
+
 .back-to-top:hover,
 .back-to-top:focus {
   width: 90px;
@@ -455,6 +538,7 @@ a {
   */
   clear: left;
 }
+
 /* 
   This changes the footer to have a background color of 29,26,26 and have a padding of 
   10px and centers the text with text align center also the footer is for my copyright and 
@@ -464,9 +548,14 @@ a {
 footer {
   background: rgb(29, 26, 26);
   padding: 10px;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -moz-box-ordinal-group: 5;
+  -ms-flex-order: 4;
   order: 4;
   text-align: center;
 }
+
 /* Changes whatever is in the footer and small tag to change the font to white */
 footer small {
   color: white;
