@@ -10,10 +10,19 @@
 
   I have used my primary color to draw the users attention to the pictures by outlining them with orange and outlining my nav with orange and making
   the back to top button a gradient orange.
+  I want my website to come across as youthful and accessible or timely and cutting-edge, so I chose a sans-serif font family. 
+
+  I chose dark mode because I am emphasizing visual content. 
+  and I am trying to evoke strong emotions based on the colors I chose along with the dark theme. 
+  
 */
 
 /* The * makes it apply to all of the code or the whole website. It changes the line height to be 140%. */
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   line-height: 140%;
 }
 
@@ -21,23 +30,19 @@
 html {
   /*Typography stuff*/
   font-size: 62.5%;
-  /*Miscellaneous*/
-  block-size: 100%;
-  inline-size: 100%;
   scroll-behavior: smooth;
 }
 
 /* 
   This changes everything in the body tag to have a background color of RGB (20, 18, 18). 
   It also changes the font to be "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
-  and changes the size of the font to be 1.5 REM.
+  and changes the size of the font to be 1.6 REM.
   Place content center centers the content
-  Changes the opacity to zero and changes the min block and inline to 100%
-  lastly changes the box sizing to border-box.
+  Changes the opacity to zero
+  Changes the margin to 0 acganges the 
 */
+
 body {
-  /*Display stuff*/
-  display: inline-block;
   /*Box model stuff*/
   margin: 0;
   background-color: rgb(20, 18, 18);
@@ -45,35 +50,31 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.6rem;
   /*Manipulations stuff*/
-  animation: fade-in 0.5s ease-in 1s forwards;
+
   opacity: 0;
   /*Miscellaneous*/
-  min-block-size: 100%;
-  min-inline-size: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   place-content: center;
   /* -https://blog.hubspot.com/website/css-animation-examples */
-  /*
-    This defines our animation.              
-    We define the animation-name as fade-in.    
-    We define the animation-duration (how long the animation lasts) as 1 second.   
-    We define the animation-timing-function (how the styling changes as it moves through the    
-    animation) as ease-in, which means it will slowly start the animation and speed up to the end.   
-    We define the animation-delay as 2 seconds.    
-    We define the animation-fill-mode (whether the styling is kept at the end of the animation    
-    or not) to forwards, which means to keep the styling that is at the end of the animation.    
-    Other animation properties that we do not define in this example are:              
-    animation-iteration-count - how many times you want your animation to run              
-    animation-direction - do you want your animation to go forward (normal)? Backward (reverse)?     
-    Forward and then backward (alternate)? Backward and then forward     
-    (alternate-reverse)?    
-    -Mr. Hardman  
+  /*    
+    This defines our animation. 
+    We define the animation-name as fade-in.
+    We define the animation-duration (how long the animation lasts) as 1 second.
+    We define the animation-timing-function (how the styling changes as it moves through the 
+    animation) as ease-in, which means it will slowly start the animation and speed up to the end. 
+    We define the animation-delay as 2 seconds.
+    We define the animation-fill-mode (whether the styling is kept at the end of the animation
+    or not) to forwards, which means to keep the styling that is at the end of the animation.        
+    Other animation properties that we do not define in this example are:                  
+    animation-iteration-count - how many times you want your animation to run                  
+    animation-direction - do you want your animation to go forward (normal)? Backward (reverse)?         
+    Forward and then backward (alternate)? Backward and then forward         
+    (alternate-reverse)?        
+    -Mr. Hardman    
   */
   -o-animation: fade-in 0.5s ease-in 1s forwards;
   -moz-animation: fade-in 0.5s ease-in 1s forwards;
   -webkit-animation: fade-in 0.5s ease-in 1s forwards;
+  animation: fade-in 0.5s ease-in 1s forwards;
 }
 
 /* 
@@ -132,7 +133,8 @@ body {
 */
 
 /* 
-  this changes the animation. I use @keyframes to show that i am creating an animation and the i use the same name that i did above
+  This changes the animation. I use @keyframes to show that I am creating an animation and the
+  I use the same name that i did above
 */
 @keyframes fade-in {
   from {
@@ -152,12 +154,6 @@ body {
   }
 }
 
-/* https://blog.hubspot.com/website/css-animation-examples */
-@media (orientation: landscape) {
-  body {
-    grid-auto-flow: column;
-  }
-}
 /* 
   This changes everything in the first heading tag to have a color of #ffffff (white).
   It also changes the text to be centered and have the size of the font to be 40 pixels. 
@@ -171,9 +167,11 @@ h1 {
 }
 /* 
   Changes the color and the space between the links
-  This changes everything in the unordered list to have a margin of 0, 
+  Changes the list style type to This changes everything in the unordered list to have a margin of 0, 
   a padding of 0, background color of RBG (20, 18, 18).
-  This also changes the display to have flex and changes the justify-content to have a space between.
+  This also changes the display to have flex and changes the justify-content to have a space around.
+  Changes overflow to hidden
+  Lastly this styles the flex-wrap to have wrap so the nav stacks when it gets smaller
 */
 ul {
   list-style-type: none;
@@ -187,21 +185,28 @@ ul {
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* 
-  This changes everything in the list item to float left.
+  This Changes the flex to have 1 so it shrinks and grows
   This also changes the position to relative and the font size the 5 rem.
 */
 li {
-  float: left;
   position: relative;
   font-size: 5rem;
+
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 /* 
@@ -219,8 +224,16 @@ li a {
 }
 
 /* 
-  This changes the scaleX on transform to zero before the transform happens .
-  This also changes the content to have no text and changes the 
+  This changes the scaleX on transform to zero before the transform happens  after it will become 1 but that is in the nav a:hover::before,
+  nav a:focus::before and this changes it to be on bottom right and the a:hover::before, nav a:focus::before changes to be bottom left                                           
+  
+  This also changes the content to have no text and changes the display to be block.
+  Changes the position to be absolute
+  Styles top=0, right=0, bottom=0, left=0, inset = 0 0 0 0
+  Styles the background color to be dark orange 
+  Changes z index to be -1
+  lastly it changes the transition speed to "transition: transform 0.3s ease;" an eases the transition in.
+  the transition lasts .3s and that is for the swiping animation  on the nav bar
   -https://blog.hubspot.com/website/css-animation-examples
 */
 nav a::before {
@@ -246,6 +259,7 @@ nav a::before {
   background: darkorange;
   z-index: -1;
 
+  /* autoprefixer: off */
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   -o-transition: -o-transform 0.3s ease;
@@ -256,8 +270,8 @@ nav a::before {
 }
 
 /* 
-  This changes the scaleX to become 1 when hovered on and change from right to bottom left.
-  there are also all of the prefix's for those.
+  This changes the scaleX to become 1 when hovered and tabbed on and change from right to bottom left.
+  there are also all of the prefix's for those. This all happens when you either hover on the bottom or tab's on it
 */
 nav a:hover::before,
 nav a:focus::before {
@@ -273,11 +287,6 @@ nav a:focus::before {
   transform-origin: bottom left;
 }
 
-/* 
-  This styles things within the navigation and the anchor hover/anchor focus. 
-  It changes the background color to be dark orange and changes the font color to be black
-  when hovered or tabbed on.
-*/
 .nav-link {
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -295,80 +304,150 @@ nav a:focus::before {
   background-color: darkorange;
   color: black;
 } */
-nav a:hover {
+/* 
+  This styles things within the navigation and the anchor hover/anchor focus. 
+  It changes the font color to be black
+  when hovered or tabbed on.
+*/
+nav a:hover,
+nav a:focus {
   color: black;
 }
 
-/* This changes the line or the hr tag to become the color orange */
+/*
+  This changes the line or the hr tag to become the color orange 
+  and border-color changes it for the other browsers.
+*/
 hr {
   border-color: darkorange;
   color: darkorange;
 }
 
-/* -W3 Schools */
-/* 
-  This grid container, which is a section with a class, is styled by changing the display to a grid and 
-  changes the grid template to organize where the pictures and main should be (pic1 main main main main pic2).
-  It also changes the gap between each grid by 10 pixels. Lastly, it changes the padding to 10 pixels.
-  This is now a section.
-*/
-.grid-container {
-  display: -ms-grid;
-  display: grid;
-
-  grid-template: "pic1 main main main main pic2";
-  grid-gap: 10px;
-
-  padding: 10px;
+main {
+  margin: 0 2.5%;
 }
 
 /* 
-  This is multimedia-left. It is the first grid on the left side of the webpage and the grid area is equal to pic1
-  and the width of the grid is 30vw and it has the overflow as hidden so it hides any overflow.
+  This changes everything in the <section id="flex-container"> <section>
+  this also changes the text align to be center
+  Lastly this changes the font size to 30px
 */
-.multimedia-left {
-  grid-area: pic1;
-  width: 30vw;
-  overflow: hidden;
-}
+#flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 
-/* 
-  This is text-content. It is the second grid on the center/main part of the webpage and the grid area is equal to main.
-  This also changes the background of the text content to be white so it is easier to read and it has a border-radius to 
-  round the edges of the border to 10px.
-*/
-.text-content {
-  -ms-grid-column-span: 7;
-  grid-area: main;
-  background-color: white;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-
-/* 
-  This is multimedia-right. It is the third grid on the right side of the webpage and the grid area is equal to pic2.
-  This also changes the width to 30vw
-*/
-.multimedia-right {
-  grid-area: pic2;
-  width: 30vw;
-}
-
-/* 
-  This changes everything in the <section class="grid-container"> <section> to have a padding 
-  of 20 pixels on the top and bottom and having padding of 0 pixels of the left and right
-*/
-.grid-container > section {
   text-align: center;
-  padding: 20px 0px;
+
   font-size: 30px;
 }
 
 /* 
-  Changes the font and makes the text in the span italic 
-  This span also changes the font to be segoe UI, tahoma,
-  ganeva, verdana, sans-seri
+  This changes flex to have it as 1 and it also changes the display to flex
+  This changes the flex-direction to column.
+  This also changes the justify-content to flex-start
+  Lastly it changes the align items to center
+*/
+#multimedia-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* 
+  This is text-content. It is the second div on the center/main part of the webpage.
+  This also changes the background of the text content to be white so it is easier to read and it has a border-radius to 
+  round the edges of the border to 10px.
+  This changes the flex to be 1.5 so it ios bigger then the videos and pictures
+*/
+#text-content {
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  -webkit-box-flex: 1.5;
+  -webkit-flex: 1.5;
+  -moz-box-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+}
+
+/* 
+  This is multimedia-right. It is the third div on the right side of the webpage.
+  This changes flex to have it as 1 and it also changes the display to flex
+  This changes the flex-direction to column.
+  This also changes the justify-content to flex-start
+  Lastly it changes the align items to center
+*/
+#multimedia-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* 
+  Changes the font and makes the text in the span italic and bold
+  This span also changes the font to be "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  This makes the font have a underline
 */
 
 span {
@@ -388,9 +467,11 @@ span {
 .all-pages-pics {
   border: 5px solid darkorange;
   padding: 15px;
+
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+
   background: rgb(29, 28, 26);
   margin-bottom: 2%;
 }
@@ -406,11 +487,12 @@ span {
 section {
   text-align: center;
   margin: auto;
-
   padding: 15px;
+
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+
   margin-bottom: 1%;
   /* background: RGB(255, 255, 255); */
   /* 
@@ -450,7 +532,7 @@ a {
 /* 
   This changes everything inside of the back to top class to  
 */
-.back-to-top {
+#back-to-top {
   /*
     We changed the display to flexbox so that we can center the
     text inside the anchor horizontally and vertically
@@ -461,11 +543,11 @@ a {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+
   /*
     This allows us to make the position to become sticky so it stays on the screen in the bottom right because the animation broke fixed.
     It is in the bottom right corner of the webpage and makes it follow the user when they scroll.
     i had to use left because for some reason sticky would does not like right.
-    
   */
   position: -webkit-sticky;
   position: sticky;
@@ -474,6 +556,7 @@ a {
   /* This changes the size of the back to top button to be 80-80px before hovered on. */
   width: 80px;
   height: 80px;
+
   /* 
     This allows us to center our content horizontally in the 
     Back to Top anchor.
@@ -484,6 +567,7 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+
   /*
     This allows us to center our content vertically in the
     Back to Top anchor.
@@ -522,8 +606,11 @@ a {
   transition: 1s ease-in-out, color 1s ease-in-out;
 }
 
-.back-to-top:hover,
-.back-to-top:focus {
+/* 
+  This changes the back to top when hovered or focus to change the width and height to 90px
+*/
+#back-to-top:hover,
+#back-to-top:focus {
   width: 90px;
   height: 90px;
 }
@@ -543,6 +630,7 @@ a {
   This changes the footer to have a background color of 29,26,26 and have a padding of 
   10px and centers the text with text align center also the footer is for my copyright and 
   this changes the color and centers the text 
+  Lastly the padding gets changed to 10px and the order to 4
 */
 
 footer {
@@ -559,4 +647,40 @@ footer {
 /* Changes whatever is in the footer and small tag to change the font to white */
 footer small {
   color: white;
+}
+
+/* 
+  This styles the #flex-containter and the #text-content and the multimedia left and right.
+  It changes them when the width of the page becomes less then 800px
+*/
+@media all and (max-width: 800px) {
+  /* 
+    This changes the flex-direction to column
+  */
+  #flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* This styles the bottom of the margin to 30px*/
+  #text-content {
+    margin-bottom: 30px;
+  }
+
+  /* This styles the flex direction to row */
+  #multimedia-left,
+  #multimedia-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }

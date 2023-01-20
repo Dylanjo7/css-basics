@@ -21,7 +21,7 @@
         to be 10 pixels. This also changes the padding to be 15 pixels and changes the background to
         be RGB (29, 26, 26).  
       */
-      #home-page-video {
+      #treaty-video {
         /* float: left; */
         border: 5px solid darkorange;
         padding: 15px;
@@ -43,18 +43,17 @@
         <li>
           <a href="reconciliation.html" class="nav-link">Reconciliation</a>
         </li>
-        <li><a href="" class="nav-link">Place Holder</a></li>
       </ul>
     </nav>
     <hr />
 
     <main>
-      <section class="grid-container">
+      <section id="flex-container">
         <!-- 
           This div has a group of images. This div is a part of a grid layout and this is the first item/column.
           This div is a class called multimedia-left and it holds the images on the left.
         -->
-        <div class="multimedia-left">
+        <div id="multimedia-left">
           <!--
             This is an image of manitoba and all of the treaty's inside of manitoba.
           -->
@@ -66,29 +65,31 @@
               different treaty's and where they are, treaty 1 is in the south of
               manitoba."
             class="all-pages-pics" />
-
-          <iframe
-            width="90%"
-            height="300vw"
-            src="https://www.youtube.com/embed/k4cBOF9DE10"
-            title="YouTube Treaty one explanation video"
-            frameborder="0"
-            allow="encrypted-media; picture-in-picture"
-            allowfullscreen
-            id="home-page-video">
-          </iframe>
-          <a
-            href="https://www.youtube.com/watch?v=k4cBOF9DE10"
-            target="_blank"
-            style="color: white">
-            Link to Treaty One Story Video
-          </a>
+          <div style="width: 90%">
+            <iframe
+              width="100%"
+              height="300vw"
+              src="https://www.youtube.com/embed/k4cBOF9DE10"
+              title="YouTube Treaty one explanation video"
+              frameborder="0"
+              allow="encrypted-media; picture-in-picture"
+              allowfullscreen
+              id="treaty-video">
+            </iframe>
+            <br />
+            <a
+              href="https://www.youtube.com/watch?v=k4cBOF9DE10"
+              target="_blank"
+              style="color: white">
+              Link to Treaty One Story Video
+            </a>
+          </div>
         </div>
         <!-- 
           This div has a group of text and facts and sections. This div is a part of a grid layout and this is the second item/column.
           This div is a class called text-content and it holds the sections in the middle.
         -->
-        <div class="text-content">
+        <div id="text-content">
           <!--
             This is a section a section tag is used to group things together on your webpage.
             I also used it so i can style borders around each section
@@ -181,7 +182,7 @@
           This div is a class called multimedia-right and it holds the images on the right.
         -->
 
-        <div class="multimedia-right">
+        <div id="multimedia-right">
           <!--
             This image has one indigenous person and one british person shaking hands in a circle.
             There is a tp behind them with buildings and a river. On the outside of the circle there
@@ -209,7 +210,7 @@
             class="all-pages-pics" />
         </div>
       </section>
-      <a href="#top" class="back-to-top">
+      <a href="#top" id="back-to-top">
         Back <br />
         to Top
       </a>

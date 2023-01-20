@@ -21,8 +21,7 @@
         to be 10 pixels. This also changes the padding to be 15 pixels and changes the background to
         be RGB (29, 26, 26).  
       */
-      #home-page-video {
-        /* float: left; */
+      #treaty-video {
         border: 5px solid darkorange;
         padding: 15px;
         border-radius: 10px;
@@ -43,18 +42,17 @@
         <li>
           <a href="reconciliation.html" class="nav-link">Reconciliation</a>
         </li>
-        <li><a href="" class="nav-link">Place Holder</a></li>
       </ul>
     </nav>
     <hr />
 
     <main>
-      <section class="grid-container">
+      <section id="flex-container">
         <!-- 
           This div has a group of images. This div is a part of a grid layout and this is the first item/column.
           This div is a class called multimedia-left and it holds the images on the left.
         -->
-        <div class="multimedia-left">
+        <div id="multimedia-left">
           <!--
             This is an image of manitoba and all of the treaty's inside of manitoba.
           -->
@@ -67,89 +65,90 @@
               manitoba."
             class="all-pages-pics" />
 
-          <iframe
-            width="90%"
-            height="300vw"
-            src="https://www.youtube.com/embed/LW-X9vCo0WY"
-            title="YouTube Treaty one reconciliation acknowledge video"
-            frameborder="0"
-            allow="encrypted-media; picture-in-picture"
-            allowfullscreen
-            id="home-page-video">
-          </iframe>
-          <a
-            href="https://www.youtube.com/watch?v=LW-X9vCo0WY"
-            target="_blank"
-            style="color: white">
-            Link to Treaty One Reconciliation Video
-          </a>
+          <div style="width: 90%">
+            <iframe
+              width="90%"
+              height="300vw"
+              src="https://www.youtube.com/embed/LW-X9vCo0WY"
+              title="YouTube Treaty one reconciliation acknowledge video"
+              frameborder="0"
+              allow="encrypted-media; picture-in-picture"
+              allowfullscreen
+              id="treaty-video">
+            </iframe>
+            <br />
+            <a
+              href="https://www.youtube.com/watch?v=LW-X9vCo0WY"
+              target="_blank"
+              style="color: white">
+              Link to Reconciliation Video
+            </a>
+          </div>
         </div>
         <!-- 
           This div has a group of text and facts and sections. This div is a part of a grid layout and this is the second item/column.
           This div is a class called text-content and it holds the sections in the middle.
         -->
-        <div class="text-content">
+        <div id="text-content">
           <!--
             This is a section a section tag is used to group things together on your webpage.
             I also used it so i can style borders around each section
           -->
 
-          <div>
-            <h2>Truth and Reconciliation Commission of Canada</h2>
-            <p>
-              "The Truth and Reconciliation Commission (TRC) provided those
-              directly or indirectly affected by the legacy of the Indian
-              Residential Schools system with an opportunity to share their
-              stories and experiences."
-            </p>
-            <!-- 
-              the a href takes you to another webpage and the target="_blank" 
-              takes you to another website/page in a new tab
-            -->
-            <a
-              href="https://www.rcaanc-cirnac.gc.ca/eng/1450124405592/1529106060525"
-              target="_blank">
-              Link to Government Of Canada Website about Reconciliation
-            </a>
-            <h2>Pembina Trails Acknowledgement</h2>
-            <p>
-              "We acknowledge being on Treaty One territory and commit to moving
-              forward in partnership with Indigenous communities towards
-              <span>reconciliation.</span>" 
-            </p>
-            <!--
-              The a href takes you to another webpage and the target="_blank" 
-              takes you to another website/page in a new tab
-            -->
-            <a href="https://treaty1.ca/treaty-one-nation/" target="_blank">
-              Link to Pembina Trails Website With their Land Acknowledgement
-            </a>
+          <h2>Truth and Reconciliation Commission of Canada</h2>
+          <p>
+            "The Truth and Reconciliation Commission (TRC) provided those
+            directly or indirectly affected by the legacy of the Indian
+            Residential Schools system with an opportunity to share their
+            stories and experiences."
+          </p>
+          <!-- 
+            the a href takes you to another webpage and the target="_blank" 
+            takes you to another website/page in a new tab
+          -->
+          <a
+            href="https://www.rcaanc-cirnac.gc.ca/eng/1450124405592/1529106060525"
+            target="_blank">
+            Link to Government Of Canada Website about Reconciliation
+          </a>
+          <h2>Pembina Trails Acknowledgement</h2>
+          <p>
+            "We acknowledge being on Treaty One territory and commit to moving
+            forward in partnership with Indigenous communities towards
+            <span>reconciliation.</span>" 
+          </p>
+          <!--
+            The a href takes you to another webpage and the target="_blank" 
+            takes you to another website/page in a new tab
+          -->
+          <a href="https://treaty1.ca/treaty-one-nation/" target="_blank">
+            Link to Pembina Trails Website With their Land Acknowledgement
+          </a>
 
-            <h2>What is Reconciliation</h2>
-            <p>
-              "Reconciliation is an ongoing process through which Indigenous
-              peoples and the Crown work cooperatively to establish and maintain
-              a mutually respectful framework for living together, with a view
-              to fostering strong, healthy, and sustainable Indigenous nations
-              within a strong Canada"
-            </p>
-            <!--
-              The a href takes you to another webpage and the target="_blank" 
-              takes you to another website/page in a new tab
-            -->
-            <a
-              href="https://www.justice.gc.ca/eng/csj-sjc/principles-principes.html"
-              target="_blank">
-              Link to Government Of Canada Website about Reconciliation
-            </a>
-          </div>
+          <h2>What is Reconciliation</h2>
+          <p>
+            "Reconciliation is an ongoing process through which Indigenous
+            peoples and the Crown work cooperatively to establish and maintain a
+            mutually respectful framework for living together, with a view to
+            fostering strong, healthy, and sustainable Indigenous nations within
+            a strong Canada"
+          </p>
+          <!--
+            The a href takes you to another webpage and the target="_blank" 
+            takes you to another website/page in a new tab
+          -->
+          <a
+            href="https://www.justice.gc.ca/eng/csj-sjc/principles-principes.html"
+            target="_blank">
+            Link to Government Of Canada Website about Reconciliation
+          </a>
         </div>
         <!-- 
           This div has a group of images. This div is a part of a grid layout and this is the third item/column.
           This div is a class called multimedia-right and it holds the images on the right.
         -->
 
-        <div class="multimedia-right">
+        <div id="multimedia-right">
           <!--
             This image has one indigenous person and one british person shaking hands in a circle.
             There is a tp behind them with buildings and a river. On the outside of the circle there
